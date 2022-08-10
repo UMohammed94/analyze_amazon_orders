@@ -1,11 +1,6 @@
 import pandas as pd
 from pathlib import Path
-
-
-PARENT_DIR = Path.cwd().parent
-
-df=pd.read_csv(str(PARENT_DIR) + '/csv_files/amazon-orders.csv')
-df=df.fillna(0)
+from config import df
 
 order_total=df["Item Total"].str.replace('$','',regex=True).astype(float)
 
@@ -38,8 +33,6 @@ print(total_tax_charged)
 effective_sales_tax_rate=((total_tax_charged/spend_total)*100)
 
 print('this is my effective sales tax rate: %',effective_sales_tax_rate)
-
-order_date = pd.to_datetime(df['Order Date'])
 
 
 
