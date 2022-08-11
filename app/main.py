@@ -46,12 +46,12 @@ def yourEffectiveSalesTaxRate():
     return effective_sales_tax_rate
 
 
-
+# todo create a function to run all other functions
 # todo what time of day do I buy more
 # todo how long do I keep something in my cart before I purchase
 # todo what day of the week am I more likely to purchase
 # todo essential purchase vs none essential purchase - look at your most popular category
-# 
+
 
 
 
